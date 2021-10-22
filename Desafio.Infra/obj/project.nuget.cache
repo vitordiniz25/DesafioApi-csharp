@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "InOV3aINMn+IJhHPS7N6CfNdAsAAWmCDwAzcJ2OMbfUnKzQdmqFEejN+5tgrVqzzhSRLtfeU3GjmtmNor0KPMA==",
+  "dgSpecHash": "odPIY+vq1aUwhn3KQnn5XeO9j6cu8HXUfOuQvzDZjNpahEVOmz2bW9+8jnOwP5j5nZD5Dr7R1icW4dGi/A0f5A==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitor.ribeiro\\source\\repos\\Desafio\\Desafio.Infra\\Desafio.Infra.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+  ],
   "logs": []
 }

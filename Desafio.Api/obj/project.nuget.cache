@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "gxtnkPzezgYujUSNVrH14eMEgxZXYtutvYkM0uSrbvaHzsEhsPnYJI7kTJQZLEt58Pkfd56fq8ad73X1ozTiEg==",
+  "dgSpecHash": "WhskZIUddpiZeuaui6S4gfUAuhcFJb3FsvvCVIkhmv0NUVYXPD25/m3hD1LCAedlR/hxviKl0EB0zTmWCMmLgQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitor.ribeiro\\source\\repos\\Desafio\\Desafio.Api\\Desafio.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
     "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",

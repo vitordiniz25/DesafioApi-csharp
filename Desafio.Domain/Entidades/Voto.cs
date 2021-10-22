@@ -12,5 +12,10 @@
             IdUsuario = idUsuario;
             IdFilme = idFilme;
         }
+
+        public void SetId(long id)
+        {
+            Id = id;
+        }
     }
 }
