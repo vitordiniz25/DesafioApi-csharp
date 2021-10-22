@@ -24,21 +24,21 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpGet]
-        [Route("v1/filmes")]
+        [Route("filmes")]
         public List<FilmeQueryResult> Listar()
         {
             return _repository.Listar();
         }
 
         [HttpGet]
-        [Route("v1/filmes/{id}")]
+        [Route("filmes/{id}")]
         public FilmeQueryResult Obter(long id)
         {
             return _repository.Obter(id);
         }
 
         [HttpPost]
-        [Route("v1/filmes")]
+        [Route("filmes")]
         public ICommandResult Inserir([FromBody] AdicionarFilmeCommand command)
         {
             var result = _handler.Handle(command);
@@ -46,7 +46,7 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpPut]
-        [Route("v1/filmes/{id}")]
+        [Route("filmes/{id}")]
         public ICommandResult Atualizar(long id, [FromBody] AtualizarFilmeCommand command)
         {
             command.Id = id;
@@ -55,7 +55,7 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("v1/filmes/{id}")]
+        [Route("filmes/{id}")]
         public ICommandResult Remover(long id)
         {
             var command = new RemoverFilmeCommand() { Id = id };

@@ -1,3 +1,8 @@
+using Desafio.Domain.Handlers;
+using Desafio.Domain.Interfaces.Repositories;
+using Desafio.Infra.Data.DataContexts;
+using Desafio.Infra.Data.Repositories;
+using Desafio.Infra.Settings;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -19,8 +24,37 @@ namespace Desafio.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            #region AppSettings
+
+            AppSettings appSettings = new AppSettings();
+            Configuration.GetSection("AppSettings").Bind(appSettings);
+            services.AddSingleton(appSettings);
+
+            #endregion
+
+            #region DataContext
+
+            services.AddScoped<DataContext>();
+
+            #endregion
+
+            #region Repositories
+            services.AddTransient<IUsuarioRepository, UsuarioRepository>();
+            services.AddTransient<IFilmeRepository, FilmeRepository>();
+            services.AddTransient<IVotoRepository, VotoRepository>();
+            #endregion
+
+            #region Handlers
+
+            services.AddTransient<UsuarioHandler, UsuarioHandler>();
+            services.AddTransient<FilmeHandler, FilmeHandler>();
+            services.AddTransient<VotoHandler, VotoHandler>();
+
+            #endregion
 
             services.AddControllers();
+
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "Desafio.Api", Version = "v1" });

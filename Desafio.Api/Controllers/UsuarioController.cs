@@ -24,21 +24,21 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpGet]
-        [Route("v1/usuarios")]
+        [Route("usuarios")]
         public List<UsuarioQueryResult> Listar()
         {
             return _repository.Listar();
         }
 
         [HttpGet]
-        [Route("v1/usuarios/{id}")]
+        [Route("usuarios/{id}")]
         public UsuarioQueryResult Obter(long id)
         {
             return _repository.Obter(id);
         }
 
         [HttpPost]
-        [Route("v1/usuarios")]
+        [Route("usuarios")]
         public ICommandResult Inserir([FromBody] AdicionarUsuarioCommand command)
         {
             var result = _handler.Handle(command);
@@ -46,7 +46,7 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpPut]
-        [Route("v1/usuarios/{id}")]
+        [Route("usuarios/{id}")]
         public ICommandResult Atualizar(long id, [FromBody] AtualizarUsuarioCommand command)
         {
             command.Id = id;
@@ -55,7 +55,7 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("v1/usuarios/{id}")]
+        [Route("usuarios/{id}")]
         public ICommandResult Remover(long id)
         {
             var command = new RemoverUsuarioCommand() { Id = id };

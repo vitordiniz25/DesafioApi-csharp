@@ -24,21 +24,21 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpGet]
-        [Route("v1/votos")]
+        [Route("votos")]
         public List<VotoQueryResult> Listar()
         {
             return _repository.Listar();
         }
 
         [HttpGet]
-        [Route("v1/votos/{id}")]
+        [Route("votos/{id}")]
         public VotoQueryResult Obter(long id)
         {
             return _repository.Obter(id);
         }
 
         [HttpPost]
-        [Route("v1/votos")]
+        [Route("votos")]
         public ICommandResult Inserir([FromBody] AdicionarVotoCommand command)
         {
             var result = _handler.Handle(command);
@@ -46,7 +46,7 @@ namespace Desafio.Api.Controllers
         }
 
         [HttpDelete]
-        [Route("v1/votos/{id}")]
+        [Route("votos/{id}")]
         public ICommandResult Remover(long id)
         {
             var command = new ExcluirVotoCommand() { Id = id };

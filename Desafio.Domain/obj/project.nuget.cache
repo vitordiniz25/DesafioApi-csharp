@@ -1,11 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "DB9MyWTL+OtvFj+uKtCo4iBDf+01bmFlW7N9A+Bg9P1j9GV1xpmJ/wAUOYtedPoTOsFAV2GskbGqC2RHPONpmA==",
+  "dgSpecHash": "9dQBk3rNMKdYN8vfzhB2U5RUtR2/wWaIbi0mnxxFxvdCmzcPMkSkMqFYqwY9vblbsdxtBIcR/5IokdMpQLMjFw==",
   "success": true,
   "projectFilePath": "C:\\Users\\vitor.ribeiro\\source\\repos\\Desafio\\Desafio.Domain\\Desafio.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\dapper\\2.0.90\\dapper.2.0.90.nupkg.sha512",
-    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512"
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\flunt\\1.0.5\\flunt.1.0.5.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.11\\microsoft.aspnetcore.authentication.jwtbearer.5.0.11.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.identitymodel.logging\\6.7.1\\microsoft.identitymodel.logging.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.7.1\\microsoft.identitymodel.protocols.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.7.1\\microsoft.identitymodel.protocols.openidconnect.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.7.1\\microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.7.1\\system.identitymodel.tokens.jwt.6.7.1.nupkg.sha512",
+    "C:\\Users\\vitor.ribeiro\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

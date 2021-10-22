@@ -29,7 +29,7 @@ namespace Desafio.Infra.Data.Repositories
                 _parameters.Add("Nome", usuario.Nome, DbType.String);
                 _parameters.Add("Login", usuario.Login, DbType.String);
                 _parameters.Add("Senha", usuario.Senha, DbType.String);
-                return _dataContext.MySqlConnection.ExecuteScalar<long>(UsuarioQueries.Inserir, _parameters);
+                return _dataContext.SqlConnection.ExecuteScalar<long>(UsuarioQueries.Inserir, _parameters);
             }
             catch(Exception ex)
             {
@@ -45,7 +45,7 @@ namespace Desafio.Infra.Data.Repositories
                 _parameters.Add("Nome", usuario.Nome, DbType.String);
                 _parameters.Add("Login", usuario.Login, DbType.String);
                 _parameters.Add("Senha", usuario.Senha, DbType.String);
-                _dataContext.MySqlConnection.Execute(UsuarioQueries.Atualizar, _parameters);
+                _dataContext.SqlConnection.Execute(UsuarioQueries.Atualizar, _parameters);
             }
             catch(Exception ex)
             {
@@ -58,7 +58,7 @@ namespace Desafio.Infra.Data.Repositories
             try
             {
                 _parameters.Add("Id", id, DbType.Int64);
-                _dataContext.MySqlConnection.Execute(UsuarioQueries.Excluir, _parameters);
+                _dataContext.SqlConnection.Execute(UsuarioQueries.Excluir, _parameters);
             }catch(Exception ex)
             {
                 throw ex;
@@ -69,7 +69,7 @@ namespace Desafio.Infra.Data.Repositories
         {
             try
             {
-                return _dataContext.MySqlConnection.Query<UsuarioQueryResult>(UsuarioQueries.Listar).ToList();
+                return _dataContext.SqlConnection.Query<UsuarioQueryResult>(UsuarioQueries.Listar).ToList();
             }
             catch(Exception ex)
             {
@@ -82,7 +82,7 @@ namespace Desafio.Infra.Data.Repositories
             try
             {
                 _parameters.Add("Id", id, DbType.Int64);
-                return _dataContext.MySqlConnection.Query<UsuarioQueryResult>(UsuarioQueries.Obter, _parameters).FirstOrDefault();
+                return _dataContext.SqlConnection.Query<UsuarioQueryResult>(UsuarioQueries.Obter, _parameters).FirstOrDefault();
             }
             catch(Exception ex)
             {
@@ -95,7 +95,7 @@ namespace Desafio.Infra.Data.Repositories
             try
             {
                 _parameters.Add("Id", id, DbType.Int64);
-                return _dataContext.MySqlConnection.Query<bool>(UsuarioQueries.CheckId, _parameters).FirstOrDefault();
+                return _dataContext.SqlConnection.Query<bool>(UsuarioQueries.CheckId, _parameters).FirstOrDefault();
             }
             catch(Exception ex)
             {

@@ -1,0 +1,12 @@
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\bin\Debug\net5.0\Desafio.Infra.deps.json
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\bin\Debug\net5.0\Desafio.Infra.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\bin\Debug\net5.0\ref\Desafio.Infra.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\bin\Debug\net5.0\Desafio.Infra.pdb
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.csproj.AssemblyReference.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.AssemblyInfoInputs.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.AssemblyInfo.cs
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.csproj.CoreCompileInputs.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\ref\Desafio.Infra.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra\obj\Debug\net5.0\Desafio.Infra.pdb

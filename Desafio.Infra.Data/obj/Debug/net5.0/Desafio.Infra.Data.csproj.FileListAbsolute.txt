@@ -1,0 +1,17 @@
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Infra.Data.deps.json
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Infra.Data.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\ref\Desafio.Infra.Data.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Infra.Data.pdb
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Domain.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Infra.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Domain.pdb
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\bin\Debug\net5.0\Desafio.Infra.pdb
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.csproj.AssemblyReference.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.AssemblyInfoInputs.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.AssemblyInfo.cs
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.csproj.CoreCompileInputs.cache
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.csproj.CopyComplete
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\ref\Desafio.Infra.Data.dll
+C:\Users\vitor.ribeiro\source\repos\Desafio\Desafio.Infra.Data\obj\Debug\net5.0\Desafio.Infra.Data.pdb

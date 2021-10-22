@@ -1,20 +1,20 @@
 ﻿using Desafio.Infra.Settings;
-using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Desafio.Infra.Data.DataContexts
 {
     public class DataContext : IDisposable
     {
-        public MySqlConnection MySqlConnection { get; set; }
+        public SqlConnection SqlConnection { get; set; }
 
         public DataContext(AppSettings appSettings)
         {
             try
             {
-                MySqlConnection = new MySqlConnection(appSettings.ConnectionString);
-                MySqlConnection.Open();
+                SqlConnection = new SqlConnection(appSettings.ConnectionString);
+                SqlConnection.Open();
             }
             catch(Exception ex)
             {
@@ -26,8 +26,8 @@ namespace Desafio.Infra.Data.DataContexts
         {
             try
             {
-                if (MySqlConnection.State != ConnectionState.Closed)
-                    MySqlConnection.Close();
+                if (SqlConnection.State != ConnectionState.Closed)
+                    SqlConnection.Close();
             }
             catch(Exception ex)
             {
