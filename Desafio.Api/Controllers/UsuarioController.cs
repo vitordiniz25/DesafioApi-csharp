@@ -3,6 +3,7 @@ using Desafio.Domain.Handlers;
 using Desafio.Domain.Interfaces.Repositories;
 using Desafio.Domain.Query;
 using Desafio.Infra.Interfaces.Commands;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
@@ -10,8 +11,9 @@ namespace Desafio.Api.Controllers
 {
     [Consumes("application/json")]
     [Produces("application/json")]
-    [Route("api/v1")]
     [ApiController]
+    [Authorize]
+    [Route("api/v1")]
     public class UsuarioController : ControllerBase
     {
         private readonly IUsuarioRepository _repository;
@@ -37,6 +39,7 @@ namespace Desafio.Api.Controllers
             return _repository.Obter(id);
         }
 
+        [AllowAnonymous]
         [HttpPost]
         [Route("usuarios")]
         public ICommandResult Inserir([FromBody] AdicionarUsuarioCommand command)

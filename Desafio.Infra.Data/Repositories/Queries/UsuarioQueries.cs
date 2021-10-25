@@ -9,5 +9,6 @@
         public static string Listar = "Select IdUsuario, Nome as Nome, Login as Login From Usuario;";
         public static string Obter = "Select IdUsuario, Nome as Nome, Login as Login From Usuario Where IdUsuario=@Id;";
         public static string CheckId = "Select IdUsuario From Usuario Where IdUsuario=@Id;";
+        public static string Autenticar = "Select IdUsuario From Usuario Where Login=@Login AND Senha=@Senha";
     }
 }

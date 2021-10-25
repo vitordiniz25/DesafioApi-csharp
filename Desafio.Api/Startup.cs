@@ -3,12 +3,17 @@ using Desafio.Domain.Interfaces.Repositories;
 using Desafio.Infra.Data.DataContexts;
 using Desafio.Infra.Data.Repositories;
 using Desafio.Infra.Settings;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Desafio.Api
 {
@@ -49,16 +54,70 @@ namespace Desafio.Api
             services.AddTransient<UsuarioHandler, UsuarioHandler>();
             services.AddTransient<FilmeHandler, FilmeHandler>();
             services.AddTransient<VotoHandler, VotoHandler>();
+            services.AddTransient<AuthenticationHandler, AuthenticationHandler>();
 
             #endregion
 
             services.AddControllers();
 
+            #region Swagger
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Desafio.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "SistemaDeVotacao.Api", Version = "v1" });
+                c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = @"Autorização utilizando bearer token. Digite 'Bearer' [espaço] e o token.",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+                c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                {
+                    {
+                        new OpenApiSecurityScheme()
+                        {
+                            Reference = new OpenApiReference()
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            },
+                            Scheme = "oauth2",
+                            Name = "Bearer",
+                            In = ParameterLocation.Header,
+                        },
+                        new List<string>()
+                    }
+                });
             });
+
+            #endregion
+
+            #region Authentication
+
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(options =>
+            {
+                options.SaveToken = true;
+                options.RequireHttpsMetadata = false;
+                options.TokenValidationParameters = new TokenValidationParameters()
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidAudience = appSettings.Audience,
+                    ValidIssuer = appSettings.Issuer,
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.Secret)),
+                    ClockSkew = TimeSpan.Zero
+                };
+            });
+
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,6 +133,8 @@ namespace Desafio.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

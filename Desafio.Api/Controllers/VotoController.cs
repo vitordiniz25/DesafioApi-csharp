@@ -3,15 +3,17 @@ using Desafio.Domain.Handlers;
 using Desafio.Domain.Interfaces.Repositories;
 using Desafio.Domain.Query;
 using Desafio.Infra.Interfaces.Commands;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
 namespace Desafio.Api.Controllers
 {
-    [Consumes("application/json")]
     [Produces("application/json")]
-    [Route("api/v1")]
+    [Consumes("application/json")]
     [ApiController]
+    [Authorize]
+    [Route("v1/api")]
     public class VotoController : ControllerBase
     {
         private readonly IVotoRepository _repository;

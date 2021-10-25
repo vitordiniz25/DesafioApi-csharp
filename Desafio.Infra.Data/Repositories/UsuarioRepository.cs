@@ -102,5 +102,19 @@ namespace Desafio.Infra.Data.Repositories
                 throw ex;
             }
         }
+
+        public bool Autenticar(string login, string senha)
+        {
+            try
+            {
+                _parameters.Add("Login", login, DbType.String);
+                _parameters.Add("Senha", senha, DbType.String);
+                return _dataContext.SqlConnection.Query<bool>(UsuarioQueries.Autenticar, _parameters).FirstOrDefault();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

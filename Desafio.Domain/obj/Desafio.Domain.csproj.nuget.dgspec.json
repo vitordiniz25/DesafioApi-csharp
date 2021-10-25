@@ -52,6 +52,10 @@
               "target": "Package",
               "version": "[1.0.5, )"
             },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.11, )"
@@ -119,6 +123,10 @@
             "Flunt": {
               "target": "Package",
               "version": "[1.0.5, )"
+            },
+            "Microsoft.AspNetCore.Authentication": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",

@@ -12,5 +12,6 @@ namespace Desafio.Domain.Interfaces.Repositories
         List<UsuarioQueryResult> Listar();
         UsuarioQueryResult Obter(long id);
         bool CheckId(long id);
+        bool Autenticar(string login, string senha);
     }
 }
